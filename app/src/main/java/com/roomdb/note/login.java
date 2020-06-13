@@ -20,7 +20,7 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username = (EditText) findViewById(R.id.uname);
+        username = (EditText) findViewById(R.id.user);
         password = (EditText) findViewById(R.id.pass);
         logg = (Button) findViewById(R.id.buttonLogin);
 
@@ -35,7 +35,7 @@ public class login extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Username dan Password benar",
                             Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent (login.this, MainActivity.class);
-                    login.this.startActivity(intent);
+                    startActivity(intent);
                     finish();
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(login.this);
